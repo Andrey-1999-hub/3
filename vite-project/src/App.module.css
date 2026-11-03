@@ -1,0 +1,8 @@
+.main {
+    background-color: rgb(5, 110, 75);
+    flex-direction: column; 
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    flex: 1;
+}
