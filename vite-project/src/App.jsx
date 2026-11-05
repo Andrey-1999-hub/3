@@ -8,8 +8,10 @@ import {currentTheme} from "./Context"
 
 
 function App() {
-  const {theme,setTheme} = useState("dark")
+  const [theme,setTheme] = useState("dark")
    function swithcTheme(){
+    console.log(12345);
+    
         if (theme == 'light'){
             setTheme('dark')
             return null
@@ -23,7 +25,7 @@ function App() {
   return (
     <currentTheme.Provider value={theme}>
       <div className = {style.main}>
-        <Header></Header>
+        <Header swithcTheme={swithcTheme}></Header>
         <Card></Card>
         <Footer></Footer>
       </div>
