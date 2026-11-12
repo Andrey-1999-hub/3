@@ -30,7 +30,7 @@ const createFakeLoadingComponent = (text, delay) => {
 
 const SecondPage = createFakeLoadingComponent(
   "Lorem ipsum dolor sit amet consectetur adipisicing elit...", 
-  3000
+  1000
 );
 
 function Core() {
