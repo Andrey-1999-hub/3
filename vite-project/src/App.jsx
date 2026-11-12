@@ -1,10 +1,6 @@
-import { useState } from "react";
-import Header from "./component/Header"; 
-import Footer from "./component/Footer"; 
-import Button from "./component/Button";
 import Card from "./component/Card";
 import style from "./App.module.css"; 
-import {currentTheme} from "./Context"
+
 
 const items = [
   { id: 1, img: "https://i.pinimg.com/originals/01/c4/cc/01c4cc357ec505c2e8cbaf60a11395db.png" },
@@ -21,38 +17,14 @@ const items = [
 ]
 
 function App() {
-  const [theme,setTheme] = useState("dark")
-   function swithcTheme(){
-    console.log(12345);
-    
-        if (theme == 'light'){
-            setTheme('dark')
-            return null
-        }
-        if (theme == 'dark'){
-            setTheme('light')
-            return null
-        }
-    }
 
   return (
-    <currentTheme.Provider value={theme}>
-      <div className = {style.main}>
-        <Header swithcTheme={swithcTheme}></Header>
-        
-      <div className={style.titleContainer}>
-        <h1  className={style.siteTitle}>MOE MOE GRAMM</h1>
-      </div>
-
-         <div className={style.container}>
-      {items.map(item => (
-        <Card key={item.id} img={item.img} />
-      ))}
+        <div className={style.container}>
+          {items.map((item) => (
+            <Card key={item.id} img={item.img} />
+          ))}
         </div>
-        
-      </div>
-    </currentTheme.Provider>
-  )
+  );
 }
 
-export default App
+export default App;
